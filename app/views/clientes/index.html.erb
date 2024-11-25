@@ -1,0 +1,38 @@
+<h1>Clientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Sexo</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @clientes.present? %>
+      <% @clientes.each do |cliente| %>
+        <tr>
+          <td><%= cliente.nome %></td>
+          <td><%= cliente.email %></td>
+          <td><%= cliente.sexo %></td>
+          <td>
+            <% if cliente.id.present? %>
+              <%= link_to 'Ver', cliente_path(cliente.id) %>
+              <%= link_to 'Editar', edit_cliente_path(cliente.id) %>
+              <%= button_to 'Deletar', cliente_path(cliente.id), method: :delete, data: { confirm: 'Tem certeza?' } %>
+            <% else %>
+              ID ausente
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr>
+        <td colspan="4">Nenhum cliente encontrado</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Novo Cliente', new_cliente_path %>
