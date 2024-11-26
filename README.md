@@ -5,11 +5,17 @@ PROCEDIMENTO:
 
 1-Instale o Ruby Installer em(https://rubyinstaller.org). Irá aparecer o prompt de comando, aperte 1 para instalar o ruby. 
 Confira se o Ruby está instalado com ruby -v
+
 2-instale o rails com ”gem install rails” no prompt de comando, confira se o rails foi instalado corretamente com rails -v
+
 3- crie o diretório crud___app com (cd crud___app) e ligue o servidor rails com (rails server)
+
 4-baixe o zip de todo o repositório do github que deixamos disponível (https://github.com/LucaV07R07/crud-rubyonrails.git)
+
 5-Encontre o arquivo na pasta e clique com o botão direito e selecione a opção extrair tudo, escolha o local onde quer salvar os arquivos extraídos e clique em extrair
+
 6-No prompt de comando escreva bundle install para certificar que todas as gems da aplicação funcionaram de acordo.
+
 7-O firebase já estará conectado na aplicação com esses códigos presentes nos arquivos instalados e as operações crud também estarão inseridas no código:
 
 
